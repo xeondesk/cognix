@@ -1,0 +1,48 @@
+[workspace]
+members = [
+    "crates/*",
+]
+
+resolver = "2"
+
+[workspace.package]
+authors = ["Cognix Team <dev@khulnasoft.com>"]
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+anyhow.workspace = true
+cfg-if.workspace = true
+chrono.workspace = true
+dirs.workspace = true
+enum-iterator.workspace = true
+futures.workspace = true
+futures-lite.workspace = true
+futures-util.workspace = true
+getset.workspace = true
+http.workspace = true
+instant.workspace = true
+ itertools.workspace = true
+lazy_static.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+asset_macro.workspace = true
+async-broadcast.workspace = true
+rstar.workspace = true
+schemars.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+strum.workspace = true
+strum_macros.workspace = true
+tempfile.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+
+windows.workspace = true
+
+cognixui = { path = "crates/cognixui_core" }
+cognixui_extras = { path = "crates/cognixui_extras" }
+cognix_core = { path = "crates/cognix_core" }
+cognix_util = { path = "crates/cognix_util" }
