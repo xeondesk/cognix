@@ -1,30 +1,9 @@
 [package]
 name = "cognix_core"
-edition = "2021"
-authors = ["Cognix Team <dev@khulnasoft.com>"]
-publish.workspace = true
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
 license.workspace = true
-
-[features]
-crash_reporting = ["dep:sentry", "dep:sentry-log"]
-integration_tests = []
-local_fs = []
-release_bundle = []
-test-util = ["dep:mockito"]
+publish.workspace = true
 
 [dependencies]
-schemars = "1"
-
-[target.'cfg(not(target_family = "wasm"))'.dependencies]
-
-[target.'cfg(target_os = "macos")'.dependencies]
-objc2-foundation = { workspace = true, features = [
-    "NSString",
-    "NSURL",
-    "NSFileManager",
-    "NSBundle",
-] }
-
-[dev-dependencies]
-[build-dependencies]
-anyhow.workspace = true
